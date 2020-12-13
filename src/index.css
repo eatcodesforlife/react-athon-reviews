@@ -123,7 +123,7 @@ p {
 /*  global classes */
 
 /* section */
-.section {
+/* .section {
   width: 90vw;
   margin: 0 auto;
   max-width: var(--max-width);
@@ -133,7 +133,7 @@ p {
   .section {
     width: 95vw;
   }
-}
+} */
 
 /*
 =============== 

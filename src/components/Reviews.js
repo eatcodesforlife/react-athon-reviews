@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import reviews from '../utils/data'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { FaChevronLeft, FaChevronRight, FaQuoteRight } from 'react-icons/fa'
 
 const Reviews = () => {
@@ -9,7 +10,6 @@ const Reviews = () => {
     const { name, job, image, text } = reviews[index]
 
     const checkIndex = (currentIndex) => {
-       
         if(currentIndex === reviews.length ) currentIndex = 0
         if(currentIndex === -1 ) currentIndex = reviews.length - 1
         return currentIndex
@@ -41,7 +41,11 @@ const Reviews = () => {
     return (
         <article className='review'>
             <div className="img-container">
-                <img src={image} alt={name} className='person-img'/>
+                <LazyLoadImage 
+                    src={image}
+                    alt={name}
+                    className='person-img'
+                />
                 <span className="quote-icon">
                     <FaQuoteRight />
                 </span>
